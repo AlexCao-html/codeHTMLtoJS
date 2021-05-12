@@ -1,0 +1,97 @@
+/* LINK STUFF */
+a {
+    text-decoration: none;
+    color: #0000ffff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: #00ff00ff;
+}
+
+/* MARGIN 0 */
+html, body {
+    margin: 0;
+}
+
+/* HEADER TO FOOTER */
+body {
+    padding: 0 1vw;
+}
+
+nav li {
+    display: inline-block;
+}
+
+footer {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    min-height: 10vh;
+}
+
+/* STICKY FOOTER */
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr auto;
+        grid-template-rows: 1fr auto;
+}
+
+header {
+    text-align: center;
+    min-height: 15vh;
+    height: auto;
+}
+
+footer {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    -ms-grid-row-span: 1;
+        grid-row-end: 3;
+}
+
+/* BURGER */
+.burger {
+  display: inline-block;
+  width: 25px;
+  cursor: pointer;
+}
+
+.burger-line {
+  height: 3px;
+  margin-bottom: 3px;
+  background: #4d4d4d;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease; /* important for animation */
+}
+
+.burger-menu.toggled .burger-line:last-child {
+  opacity: 0;
+}
+
+.burger-menu.toggled .burger-line:first-child {
+  -webkit-transform: rotate(45deg) translate(4px, 4px);
+     -moz-transform: rotate(45deg) translate(4px, 4px);
+      -ms-transform: rotate(45deg) translate(4px, 4px);
+       -o-transform: rotate(45deg) translate(4px, 4px);
+          transform: rotate(45deg) translate(4px, 4px);
+}
+
+.burger-menu.toggled .burger-line:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
